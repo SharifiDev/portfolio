@@ -2,7 +2,7 @@ import React from 'react'
 import { HomeRounded, SchoolRounded,FaceRounded,SelfImprovementRounded, TextSnippetRounded, TerminalRounded, MessageRounded, ConnectWithoutContactRounded, CopyrightRounded } from '@mui/icons-material';
 import {  Tabs, Tab } from '@mui/material';
 import { useContext } from 'react';
-import MinContext from './../../context'
+import MinContext from '../../context'
 import { useTheme } from '@mui/material/styles';
 import { grey } from '@mui/material/colors';
 

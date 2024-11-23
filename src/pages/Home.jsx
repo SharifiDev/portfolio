@@ -1,7 +1,6 @@
 import React from 'react'
-import bghome from './../assets/imgs/bg03.jpeg'
+import bghome from '../assets/imgs/bg03.jpeg'
 import { Typography ,Box} from '@mui/material';
-import { ReactTyped} from "react-typed";
 import { useRef,useEffect,useCallback } from 'react';
 
 import Typed from 'typed.js';

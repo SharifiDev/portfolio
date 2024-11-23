@@ -2,7 +2,7 @@ import React from 'react'
 import {Fab,Box} from '@mui/material'
 import { MenuRounded } from '@mui/icons-material';
 import { useContext } from 'react';
-import MinContext from './../../context'
+import MinContext from '../../context'
 export default function DrawerActionBtn() {
     const {toggleChangeDrawer} = useContext(MinContext)
     return (

@@ -1,9 +1,9 @@
 import React from 'react'
-import avatar from './../../../public/imgs/avatar.jpg';
+import avatar from '../../../public/imgs/avatar.jpg';
 import { Box, Typography, Avatar, Divider, Hidden, Tabs, Tab,IconButton } from '@mui/material';
 import { grey } from '@mui/material/colors'
 import { GitHub,Facebook,Telegram,Instagram,WhatsApp,LinkedIn } from '@mui/icons-material';
-import ThemeActionBtn from './../ThemeActionBtn'
+import ThemeActionBtn from '../ThemeActionBtn'
 import { useTheme } from '@mui/material/styles';
 
 export default function SitebarHeader() {

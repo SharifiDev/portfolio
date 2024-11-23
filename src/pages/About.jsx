@@ -1,21 +1,14 @@
 import React from 'react'
 import { Typography, Box, Avatar, Divider, Chip } from '@mui/material';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Grid from '@mui/material/Grid2';
-import { grey } from '@mui/material/colors';
-import { useState, useEffect } from 'react';
-import avatar from './../assets/imgs/avatar.jpg'
-import { Height } from '@mui/icons-material';
-import { CodeRounded, SelfImprovementRounded } from '@mui/icons-material';
+import avatar from '../assets/imgs/avatar.jpg'
+import { CodeRounded } from '@mui/icons-material';
 import DevInfo from './components/DevInfo'
-import Skill from './components/skill.jsx';
-import { devSkills } from './../constants/devSkills.js'
 import { KeyboardArrowLeftRounded } from '@mui/icons-material';
 import CountUp from 'react-countup';
-import {devWorkInfo} from './../constants/details.js'
-import { Coffee } from '@mui/icons-material';
+import {devWorkInfo} from '../constants/details.js'
 import { useTheme } from '@mui/material';
 export default function About() {
  

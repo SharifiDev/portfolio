@@ -1,5 +1,4 @@
 import React from 'react'
-import html  from './../../assets/icons/html5-original.svg'
 import { Typography, Chip, Box, Divider, LinearProgress } from '@mui/material'
 import { grey } from '@mui/material/colors'
 export default function Skill({ icon, color, name, value }) {

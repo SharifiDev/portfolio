@@ -17,7 +17,7 @@ import {
 import Grid from "@mui/material/Grid2";
 import { SchoolRounded } from "@mui/icons-material";
 
-import { courses } from "./../constants/courses";
+import { courses } from "../constants/courses";
 
 const Courses = ({ helmetTitle }) => {
   const [loading, setLoading] = useState(false);

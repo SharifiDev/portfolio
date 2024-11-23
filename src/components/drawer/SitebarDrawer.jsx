@@ -1,7 +1,7 @@
 import React from 'react'
 import Drawer from '@mui/material/Drawer';
 import { useContext } from 'react';
-import Mincontext from './../../context'
+import Mincontext from '../../context'
 import SitebarContent from '../sitebar/SitebarContent';
 
 
