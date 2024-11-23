@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'dana';
+    src: url("./../font/Dana/woff2/DanaFaNum-Regular.woff2") format("woff2");
+    font-weight:normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'dana-bold';
+    src: url("./../font/Dana/woff2/DanaFaNum-DemiBold.woff2") format("woff2");
+    font-weight:bold;
+    font-style: bold;
+}
+
+
+@font-face {
+    font-family:'tanha';
+    src: url('./../font/Tanha/Tanha.eot');
+    src: url('./../font/Tanha/Tanha.eot') format("embedded-opentype"),
+     url('./../font//Tanha/Tanha.ttf') format('truetype'),
+    url('./../font/Tanha/Tanha.woff2') format('woff2'),
+    url('./../font/Tanha/Tanha.woff') format('woff')
+}
