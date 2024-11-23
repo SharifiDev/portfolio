@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import MainLayout from './layouts/mainLayout'
 import SideBar from './components/sitebar/SideBar'
 import PagesContainer from './containers/PagesContainer'
@@ -6,13 +6,34 @@ import Page from './pages/Page'
 import SitebarContainer from './containers/SitebarContainer';
 import MinContext from "./context"
 import DrawerActionBtn from './components/drawer/DrawerActionBtn';
+import { useTheme } from '@mui/material/styles';
+
+import {Home,About,Resume,Courses,Contact,Education,Skills} from './pages'
+import { useMediaQuery } from '@mui/material'
 
 
-import {Home,About,Resume,Courses,Contact} from './pages'
+
 
 function App() {
   const [pageNumber, setPageNumber] = useState(0)
   const [open, setOpen] = useState(false)
+  const [mode , setMode]  = useState()
+
+
+  const theme = useTheme()
+  const prefersDarkTheme = useMediaQuery('(prefers-color-scheme: dark');
+  console.log(prefersDarkTheme);
+  
+
+
+
+
+  const handleChangeMode = ()=>{
+    setMode(pre => pre === 'light'? 'dark' : 'light')
+  }
+  useEffect(()=>{
+    setMode(prefersDarkTheme ? 'dark' : 'light')
+  },[])
 
   const toggleChangeDrawer = () => {
     setOpen(!open)
@@ -28,8 +49,17 @@ function App() {
 
   return (
     <>
-    <MinContext.Provider  value={{pageNumber,setPageNumber,handlePageNumber,open,setOpen,toggleChangeDrawer,closeDrawer}} >
-      <MainLayout>
+    <MinContext.Provider  value={{
+      pageNumber,
+      setPageNumber,
+      handlePageNumber,
+      open,
+      setOpen,
+      toggleChangeDrawer,
+      closeDrawer,
+      handleChangeMode
+      }} >
+      <MainLayout mode={mode}>
 
         <SitebarContainer>
           <SideBar/>
@@ -44,12 +74,18 @@ function App() {
             <About/>
           </Page>
           <Page value={pageNumber} index={2}>
-            <Resume/>
+            <Skills/>
           </Page>
           <Page value={pageNumber} index={3}>
-            <Courses/>
+            <Resume/>
           </Page>
           <Page value={pageNumber} index={4}>
+            <Education/>
+          </Page>
+          <Page value={pageNumber} index={5}>
+            <Courses/>
+          </Page>
+          <Page value={pageNumber} index={6}>
             <Contact/>
           </Page>
         </PagesContainer>

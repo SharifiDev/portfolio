@@ -6,7 +6,7 @@ export default function Skill({ icon, color, name, value }) {
    
     return (
         <>
-            <Divider textAlign="left" sx={{ color: 'black', mb:0 , width: 1, "&::before, &::after": { borderColor:grey[300],borderWidth:1 } }}>
+            <Divider textAlign="left" sx={{ color: 'black', mb:0 , width: 1,  }}>
                 <Chip driection="rtl" color={color}
       
                 label={
@@ -19,13 +19,13 @@ export default function Skill({ icon, color, name, value }) {
                 icon={<Box component='img' src={icon} sx={{height:30,width:30}}/>}
                     sx={{ p: 3, }} />
             </Divider>
-            <Box sx={{display:"flex",alignItems:'center',mb:3,width:700,}}>
+            <Box sx={{display:"flex",alignItems:'center',mb:3}}>
                 <Box sx={{width:1,mr:1}}>
                     <LinearProgress variant='determinate' value={value} color={color} sx={{height:10,borderRadius:2}}/>
 
                 </Box>
                 <Box sx={{mainwidth:35}}>
-                    <Typography variant='body2' color='purple'>{value}%</Typography>
+                    <Typography variant='body2' color='text.primary'>{value}%</Typography>
                 </Box>
 
             </Box>

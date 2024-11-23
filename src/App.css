@@ -21,3 +21,23 @@ body{
 .MuiTabs-root::-webkit-scrollbar{
   display: none;
 }
+
+
+
+.sidebar {  
+  overflow-y: scroll;  
+  height: 100vh; /* یا هر ارتفاع دیگری که نیاز دارید */  
+}  
+
+.sidebar::-webkit-scrollbar {  
+  width: 0px; /* عرض نوار اسکرول */  
+}  
+
+.sidebar::-webkit-scrollbar-thumb {  
+  background-color: darkgrey; /* رنگ متناسب برای نوار اسکرول */  
+  border-radius: 10px; /* گرد کردن گوشه‌ها */  
+}  
+
+.sidebar::-webkit-scrollbar-track {  
+  background: #f1f1f1; /* رنگ پس‌زمینه نوار اسکرول */  
+}

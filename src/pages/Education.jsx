@@ -85,7 +85,7 @@ const Resume = ({ helmetTitle }) => {
                     </Divider>
                 </Slide>
                 <Grid container sx={{ mt: 4,display:'flex',justifyContent:'start',alignItems:'start',width:'100%' }}>
-                    <Grid size={{xs:12}}>
+                <Grid size={{xs:12}}>
                         <Slide
                             direction="down"
                             in={loading}
@@ -97,28 +97,29 @@ const Resume = ({ helmetTitle }) => {
                                 textAlign="center"
                                 sx={{
                                     "&::before, &::after": {
-                                        borderColor: "warning.main",
+                                        borderColor: "info.main",
                                     },
                                 }}
                             >
                                 <Chip
-                                    icon={<HomeRepairServiceRounded />}
-                                    color="warning"
+                                    icon={<SchoolRounded />}
+                                    color="info"
                                     label={
                                         <Typography
                                             variant="body1"
                                             color="black"
                                             sx={{ textAlign: "center" }}
                                         >
-                                            تجربیات
+                                            تحصیلات
                                         </Typography>
                                     }
                                     sx={{ p: 3 }}
                                 />
                             </Divider>
                         </Slide>
+
                         <Timeline position="right" sx={{ direction: "ltr" }}>
-                            {devTjrobiat.map((item, index) => (
+                            {devEdu.map((item, index) => (
                                 <Slide
                                     direction="up"
                                     in={loading}
@@ -131,10 +132,10 @@ const Resume = ({ helmetTitle }) => {
                                     <TimelineItem key={index}>
                                         <TimelineSeparator>
                                             <TimelineDot
-                                                color="warning"
+                                                color="info"
                                                 variant="outlined"
                                             >
-                                                <HomeRepairServiceRounded color="warning" />
+                                                <SchoolRounded color="info" />
                                             </TimelineDot>
                                             {index != 3 ? (
                                                 <TimelineConnector />

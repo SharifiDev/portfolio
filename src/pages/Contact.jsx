@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
+import { useTheme } from "@mui/material";
 
-import { useTheme } from "@mui/material/styles";
 import {
     Divider,
     Chip,
@@ -45,6 +45,7 @@ const Contact = ({ helmetTitle }) => {
                 overflowY: "scroll",
                 display: "flex",
                 flexDirection: "column",
+                backgroundColor:theme.palette.mode == 'dark'?'#111827':'#F3F4F6'
             }}
         >
             <Helmet>
@@ -206,7 +207,7 @@ const Contact = ({ helmetTitle }) => {
                         >
                             <Typography
                                 variant="h6"
-                                color="black"
+                                color="text.primary"
                                 sx={{
                                     fontFamily: "vazir",
                                     mt: 4,
@@ -221,7 +222,7 @@ const Contact = ({ helmetTitle }) => {
                             </Typography>
                             <Typography
                                 variant="body1"
-                                color="black"
+                                color="text.primary"
                                 sx={{
                                     mt: 2,
                                     display: {
@@ -233,7 +234,7 @@ const Contact = ({ helmetTitle }) => {
                             >
                                 👋{" "}
                                 <a
-                                    href="mailto:younes.gh@chmail.ir"
+                                    href="al.sharifi6487@gmail.com"
                                     alt="email"
                                     style={{
                                         color: "tomato",

@@ -12,57 +12,16 @@ import { CodeRounded, SelfImprovementRounded } from '@mui/icons-material';
 import DevInfo from './components/DevInfo'
 import Skill from './components/skill.jsx';
 import { devSkills } from './../constants/devSkills.js'
-
-
+import { KeyboardArrowLeftRounded } from '@mui/icons-material';
+import CountUp from 'react-countup';
+import {devWorkInfo} from './../constants/details.js'
+import { Coffee } from '@mui/icons-material';
+import { useTheme } from '@mui/material';
 export default function About() {
-    const [javascript, setJavascript] = useState(0);
-    const [html, setHtml] = useState(0);
-    const [css, setCss] = useState(0);
-    const [nodeJs, setNodeJs] = useState(0);
-    const [reactJs, setReactJs] = useState(0);
-    const [git, setGit] = useState(0);
-
-    useEffect(() => {
-        const timer = setInterval(() => {
-            setJavascript((oldProgress) => {
-                const diff = Math.floor( Math.random() * 10)
-                return Math.min(oldProgress + diff, 82);
-            });
-
-            setHtml((oldProgress) => {
-                const diff = Math.floor(Math.random() * 10)
-                return Math.min(oldProgress + diff, 95);
-            });
-
-            setCss((oldProgress) => {
-                const diff = Math.floor(Math.random() * 10)
-                return Math.min(oldProgress + diff, 73);
-            });
-
-            setReactJs((oldProgress) => {
-                const diff = Math.floor(Math.random() * 10)
-                return Math.min(oldProgress + diff, 95);
-            });
-
-            setNodeJs((oldProgress) => {
-                const diff = Math.floor(Math.random() * 10)
-                return Math.min(oldProgress + diff, 86);
-            });
-
-            setGit((oldProgress) => {
-                const diff = Math.floor(Math.random() * 10)
-                return Math.min(oldProgress + diff, 66);
-            });
-        }, 200);
-
-        return () => {
-            clearInterval(timer);
-        };
-    }, []);
-    const { htmlSkill, cssSkill, jsSkill, reactSkill, nodeSkill, gitSkill ,vueSkill,matreialSkill,reduxSkill,wordprssSkill,tailwintSkill,bootstrapSkill,mysqlSkill,mongodbSkill} = devSkills;
-
+ 
+   const theme = useTheme()
     return (
-        <Card sx={{ height:'100vh', overflowY: 'auto', backgroundColor: "whitesmoke" }}>
+        <Card sx={{ height:'100vh', overflowY: 'auto' ,backgroundColor:theme.palette.mode == 'dark'?'#111827':'#F3F4F6'}}>
             <Divider textAlign="center" sx={{ color: 'black', my:2, width: 1, "&::before, &::after": { borderColor: 'primary.main' } }}>
                 <Chip color="primary" label={
                     <Typography variant='body1' color="black" sx={{width:{xs:200,sm:400} , textAlign: "center", display: "flex", justifyContent: 'center', alignItems: 'center', gap: 3 }} >
@@ -74,12 +33,12 @@ export default function About() {
             <CardContent>
                 <Grid container sx={{ diplay: 'flex', alignItems:'center' ,justifyContent:'center'}}>
                     <Grid size={{ xs: 0, sm: 0, md: 4, lg: 4, xl: 4 }} sx={{ pr: 4 }}>
-                        <Avatar variant='rounded' sx={{ width: 1, height: 'auto', display: { xs: 'none', sm: 'none', md: 'block', lg: 'block', xl: 'block' } }} src={avatar} />
+                        <Avatar variant='rounded' sx={{ width: 1, height:1, backgroundPosition:'center', display: { xs: 'none', sm: 'none', md: 'block', lg: 'block', xl: 'block' } }} src={avatar} />
 
                     </Grid>
 
                     <Avatar variant='rounded' sx={{  width:300, height: 'auto',mb:3, display: { xs: 'flex', sm: 'flex', md: 'none', lg: 'none', xl: 'none' } }} src={avatar} />
-                    <Grid size={{ xs: 12, sm: 12, md: 8, lg: 8, xl: 8 }} sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}>
+                    <Grid size={{ xs: 12, sm: 12, md: 8, lg: 8, xl: 8 }} sx={{ display: 'flex', flexDirection:{xs:'column',sm:'row'}, justifyContent: 'center', alignItems: 'center' }}>
                         <Grid sx={{textAlign:'start',mr:5}}>
                         <DevInfo>نام و نام خانوادگی : علی شریفی</DevInfo>
                         <DevInfo>سن : 22</DevInfo>
@@ -87,42 +46,34 @@ export default function About() {
                         <DevInfo>آدرس ایمیل :alidev@gmail.com</DevInfo>
                         <DevInfo>شماره موبایل : 090343444</DevInfo>
                         </Grid>
-                        <Grid sx={{textAlign:'start',display:{xs:'none',sm:'inline',md:'none',lg:'inline'}}} >
-                        {/* <DevInfo> من سید علی سینا شریفی برنامه نویس فرانت اند و تسلط به زبان های برنام ه  نویسی زیادی استم</DevInfo> */}
+                        <Grid sx={{textAlign:'start',mb:6,backgroundColor:'blure',display:{xs:'inline',sm:'inline',md:'none',lg:'inline'},justifyContent:'center',width:300,mt:5}} >
+                          <Typography color={'text.primary'}  variant='h6'><KeyboardArrowLeftRounded sx={{verticalAlign:'bottom',color:'primary.main'}}/>من یک:</Typography>
+                        <Typography  color={'text.primary'} sx={{backgroundColor:'dred',ml:3}} >برنامه‌نویس فرانت‌اند با تجربه و اشتیاق به یادگیری. به دنبال فرصتی در یک تیم خلاق هستم تا با تمرکز بر کیفیت و تجربه کاربری، به موفقیت پروژه‌ها کمک کنم.</Typography>
 
                         </Grid>
 
                     </Grid>
                 </Grid>
-                <Grid container>
-                    <Grid sx={{ width: 1 ,mt:4}}>
-                        <Divider textAlign="center" sx={{ color: 'black', mb: 2, width: 1, "&::before, &::after": { borderColor: 'primary.main' } }}>
-                            <Chip color="secondary" label={
-                                <Typography variant='body1' color="black" sx={{ textAlign: "center", display: "flex", justifyContent: 'center', alignItems: 'center', gap: 0 }} >
-                                    مهارت های من <SelfImprovementRounded />
+             <Box component="div" sx={{width:1,mb:2, display:'flex',flexDirection:{xs:'column',sm:'row'} ,alignItems:{xs:'center',sm:'start'},justifyContent:'center',gap:1 , mt:{xs:0,sm:5}}}>
+                {
+
+                    devWorkInfo.map((item,index) =>{
+                        console.log(item)
+                        return (
+                            <Box key={index} component="div" sx={{width:{xs:1,sm:200},mb:2}}>
+                            <Chip icon={<item.icon/>} label={
+                                <Typography  variant="body1" color="whitesmoke">
+                                  <CountUp start={0} end={item.total} duration={7}/>
                                 </Typography>
-                            }
-                                sx={{ p: 3 }} />
-                        </Divider>
-                        <Skill sx={{ mb: 10, backgroud: 'red' }} name={htmlSkill.name} icon={htmlSkill.icon} color={htmlSkill.color} value={html} />
-                        <Skill sx={{ mb: 10, backgroud: 'red' }} name={cssSkill.name} icon={cssSkill.icon} color={cssSkill.color} value={css} />
-                        <Skill sx={{ mb: 10, backgroud: 'red' }} name={bootstrapSkill.name} icon={bootstrapSkill.icon} color={bootstrapSkill.color} value={git} />
-                        <Skill sx={{ mb: 10, backgroud: 'red' }} name={tailwintSkill.name} icon={tailwintSkill.icon} color={tailwintSkill.color} value={git} />
-                        <Skill sx={{ mb: 10, backgroud: 'red' }} name={jsSkill.name} icon={jsSkill.icon} color={jsSkill.color} value={javascript} />
-                        <Skill sx={{ mb: 10, backgroud: 'red' }} name={vueSkill.name} icon={vueSkill.icon} color={vueSkill.color} value={git} />
-                        <Skill sx={{ mb: 10, backgroud: 'red' }} name={reactSkill.name} icon={reactSkill.icon} color={reactSkill.color} value={reactJs} />
-                        <Skill sx={{ mb: 10, backgroud: 'red' }} name={reduxSkill.name} icon={reduxSkill.icon} color={reduxSkill.color} value={git} />
-                        <Skill sx={{ mb: 10, backgroud: 'red' }} name={matreialSkill.name} icon={matreialSkill.icon} color={matreialSkill.color} value={git} />
-                        <Skill sx={{ mb: 10, backgroud: 'red' }} name={mongodbSkill.name} icon={mongodbSkill.icon} color={mongodbSkill.color} value={git} />
-                        <Skill sx={{ mb: 10, backgroud: 'red' }} name={gitSkill.name} icon={gitSkill.icon} color={gitSkill.color} value={git} />
-                        <Skill sx={{ mb: 10, backgroud: 'red' }} name={nodeSkill.name} icon={nodeSkill.icon} color={nodeSkill.color} value={nodeJs} />
-                        <Skill sx={{ mb: 10, backgroud: 'red' }} name={mysqlSkill.name} icon={mysqlSkill.icon} color={mysqlSkill.color} value={git} />
-                        <Skill sx={{ mb: 10, backgroud: 'red' }} name={wordprssSkill.name} icon={wordprssSkill.icon} color={wordprssSkill.color} value={git} />
-
-                    </Grid>
-
-                </Grid>
+                            } sx={{p:2,backgroundColor:item.color,width:1}}/>
+                            <Typography color="text.primary" sx={{mt:1}}>{item.tooltipTitle}  </Typography>
+                        </Box>
+                        )
+                    })
+                }
+                    </Box>
             </CardContent>
         </Card>
     )
 }
+

@@ -5,7 +5,8 @@ export default createContext({
     open:false,
     toggleChangeDraer:()=>{},
     closeDrawer:()=>{},
-    handlePageNumber:()=>{}
+    handlePageNumber:()=>{},
+    handleChangeMode:()=>{}
 
 
 

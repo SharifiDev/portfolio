@@ -25,7 +25,7 @@ export default function Home() {
 
         })
         const typedInfo = new Typed(infoEl.current,{
-            strings:["من یک توسعه دهنده فول استک هستم","من یک مدرس برنامه نویس هستم ","من یک فرلنسر هستم",],
+            strings:["من یک توسعه دهنده فرانت اند هستم","من یک  برنامه نویس هستم ","من یک فرلنسر هستم",],
             startDelay:1500,
             typeSpeed:80,
             backSpeed:60,
