@@ -48,7 +48,7 @@ export const courses = [
     {
         title: "دوره جامع استرپی",
         image: contact,
-        link: "https://sharifidev.github.io/contacts-manager-app/contacts",
+        link: "https://github.com/SharifiDev/contacts-manager-app",
         info: `استرپی یک سیستم مدیریت محتوای هدلس و اوپن سورس است که کاملاً با جاوا اسکریپت توسعه یافته و به صورت کامل قابل سفارشی سازی است .
 
 با استفاده از سیستم مدیریت محتوای Strapi به سادگی می توانیم بهترین Api ها را طراحی کنیم و مهمتر از همه محتواها را به سادگی مدیریت کنیم.`,

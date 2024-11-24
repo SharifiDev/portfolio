@@ -34,7 +34,6 @@ const Courses = ({ helmetTitle }) => {
     <Card
       sx={{
         height: "100vh",
-        backgroundColor: "whitesmoke",
         overflowY: "scroll",
         backgroundColor:theme.palette.mode == 'dark'?'#111827':'#F3F4F6'
       }}
@@ -60,12 +59,12 @@ const Courses = ({ helmetTitle }) => {
             }}
           >
             <Chip
-              icon={<SchoolRounded />}
+              icon={<SchoolRounded/>}
               color="primary"
               label={
                 <Typography
                   variant="body1"
-                  color="black"
+                  color="text.primary"
                   sx={{ textAlign: "center" }}
                 >
                   نمونه کارهای من
@@ -78,7 +77,7 @@ const Courses = ({ helmetTitle }) => {
 
         <Grid
           container
-          sx={{ mx: 3, display: "flex", justifyContent: "center" }}
+          sx={{ mx: 0, display: "flex", justifyContent: "center" }}
         >
           {courses.map((course, index) => (
             <Grid
@@ -87,7 +86,7 @@ const Courses = ({ helmetTitle }) => {
               sm={6}
               md={6}
               lg={4}
-              sx={{ px: 2, mb: 2 }}
+              sx={{ px: 1, mb: 2 }}
             >
               <Slide
                 direction="up"
@@ -98,8 +97,9 @@ const Courses = ({ helmetTitle }) => {
               >
                 <Card
                   sx={{
-                    maxWidth:495,
+                    // maxWidth:695,
                     backgroundColor: "steelblue",
+                    borderRadius:5
                   }}
                 >
                   <CardActionArea>
@@ -118,7 +118,7 @@ const Courses = ({ helmetTitle }) => {
                       color='text.primary'
                       target="_blank"
                     >
-                      اطلاعات بیشتر
+                     رفتن به وب سایت
                     </Button>
                   </CardActions>
                 </Card>

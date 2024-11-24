@@ -21,9 +21,9 @@ export default function SitebarTabs() {
         {label:'صفحه اصلی',icon:<HomeRounded />,...tabprops(0)},
         {label:'درباره من',icon:<FaceRounded />,...tabprops(1)},
         {label:'مهارت های من',icon:<SelfImprovementRounded/>,...tabprops(2)},
-        {label:'سوابق تحصیلی  ',icon:<SchoolRounded />,...tabprops(3)},
-        {label:'سوابق شغلی  ',icon:<TextSnippetRounded />,...tabprops(4)},
-        {label:'نمونه کار ها',icon:<TerminalRounded/>,...tabprops(5)},
+        {label:'نمونه کار ها',icon:<TerminalRounded/>,...tabprops(3)},
+        {label:'سوابق تحصیلی  ',icon:<SchoolRounded />,...tabprops(4)},
+        {label:'سوابق شغلی  ',icon:<TextSnippetRounded />,...tabprops(5)},
         {label:'ارتباط با من',icon:<ConnectWithoutContactRounded />,...tabprops(6)},
     ]
     return (

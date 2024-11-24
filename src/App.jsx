@@ -12,28 +12,41 @@ import {Home,About,Resume,Courses,Contact,Education,Skills} from './pages'
 import { useMediaQuery } from '@mui/material'
 
 
-
-
 function App() {
+
+  const getMode = ()=>{
+    const initialModel = localStorage.getItem('theme')
+    if(initialModel==null){
+        if(window.matchMedia("(prefers-color-scheme:dark").matches){
+            return true
+        }else{
+            return false
+        }
+    }else{
+
+        return JSON.parse(localStorage.getItem("theme"))
+    }
+}
+
+
   const [pageNumber, setPageNumber] = useState(0)
   const [open, setOpen] = useState(false)
-  const [mode , setMode]  = useState()
+  const [mode , setMode]  = useState(getMode())
 
 
   const theme = useTheme()
-  const prefersDarkTheme = useMediaQuery('(prefers-color-scheme: dark');
-  console.log(prefersDarkTheme);
+  // const prefersDarkTheme = useMediaQuery('(prefers-color-scheme: dark');
   
+useEffect(()=>{
+   localStorage.setItem('theme',JSON.stringify(mode))
 
+},[mode])
 
 
 
   const handleChangeMode = ()=>{
-    setMode(pre => pre === 'light'? 'dark' : 'light')
+    setMode(!mode)
   }
-  useEffect(()=>{
-    setMode(prefersDarkTheme ? 'dark' : 'light')
-  },[])
 
   const toggleChangeDrawer = () => {
     setOpen(!open)
@@ -59,7 +72,7 @@ function App() {
       closeDrawer,
       handleChangeMode
       }} >
-      <MainLayout mode={mode}>
+      <MainLayout mode={mode?'dark':'light'}>
 
         <SitebarContainer>
           <SideBar/>
@@ -77,13 +90,13 @@ function App() {
             <Skills/>
           </Page>
           <Page value={pageNumber} index={3}>
-            <Resume/>
+            <Courses/>
           </Page>
           <Page value={pageNumber} index={4}>
-            <Education/>
+            <Resume/>
           </Page>
           <Page value={pageNumber} index={5}>
-            <Courses/>
+            <Education/>
           </Page>
           <Page value={pageNumber} index={6}>
             <Contact/>

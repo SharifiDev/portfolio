@@ -11,12 +11,12 @@ export default function Skill({ icon, color, name, value }) {
                 label={
                     <Typography 
      
-                     variant='body1' color="black" sx={{ textAlign: "center", display:"flex", justifyContent: 'center', alignItems: 'center', gap: 0,width:100 }} >
+                     variant='body1' color="black" sx={{ml:1, textAlign: "center", display:"flex", justifyContent: 'center', alignItems: 'center', gap: 0,width:60 }} >
                        {name}
                     </Typography>
                 }
                 icon={<Box component='img' src={icon} sx={{height:30,width:30}}/>}
-                    sx={{ p: 3, }} />
+                    sx={{ py: 3, px:1 }} />
             </Divider>
             <Box sx={{display:"flex",alignItems:'center',mb:3}}>
                 <Box sx={{width:1,mr:1}}>

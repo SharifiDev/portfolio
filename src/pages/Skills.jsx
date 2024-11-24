@@ -102,7 +102,7 @@ export default function Skills() {
                 <Grid container>
                     <Grid sx={{ width: 1 ,mt:0}}>
                         <Divider textAlign="center" sx={{ color: 'text.primary', mb: 2, width: 1, "&::before, &::after": { borderColor: 'primary.main' } }}>
-                            <Chip color="secondary" label={
+                            <Chip color="info" label={
                                 <Typography variant='body1' color="black" sx={{ textAlign: "center", display: "flex", justifyContent: 'center', alignItems: 'center', gap: 0 }} >
                                     مهارت های من <SelfImprovementRounded />
                                 </Typography>

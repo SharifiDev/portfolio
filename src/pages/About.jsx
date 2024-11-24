@@ -17,8 +17,8 @@ export default function About() {
         <Card sx={{ height:'100vh', overflowY: 'auto' ,backgroundColor:theme.palette.mode == 'dark'?'#111827':'#F3F4F6'}}>
             <Divider textAlign="center" sx={{ color: 'black', my:2, width: 1, "&::before, &::after": { borderColor: 'primary.main' } }}>
                 <Chip color="primary" label={
-                    <Typography variant='body1' color="black" sx={{width:{xs:200,sm:400} , textAlign: "center", display: "flex", justifyContent: 'center', alignItems: 'center', gap: 3 }} >
-                         توسعه دهنده فرانت اند <CodeRounded  />
+                    <Typography variant='body1' color="black" sx={{width:{xs:130,sm:300} , textAlign: "center", display: "flex", justifyContent: 'center', alignItems: 'center', gap: 3 }} >
+                         توسعه دهنده فرانت اند <CodeRounded sx={{display:{xs:'none',sm:'block'}}} />
                     </Typography>
                 }
                     sx={{ p: 3 }} />

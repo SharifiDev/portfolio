@@ -55,7 +55,7 @@ const Contact = ({ helmetTitle }) => {
                 <Divider
                     textAlign="center"
                     sx={{
-                        mt: 2,
+                        mt: 0,
                         "&::before, &::after": {
                             borderColor: "warning.main",
                         },

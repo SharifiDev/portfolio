@@ -44,8 +44,8 @@ export default function Home() {
 
     return (
         <>
-            <Box sx={{ backgroundImage: `url(${bghome})`,width:1, height: '100%', backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat',display:'flex',flexDirection:'column', alignItems:'center' ,justifyContent:'center' }}   >
-                <Box sx={{backgroundColor:'rgba(0,0,0,0.4)' ,p:5,width:{xs:200,sm:400,md:400,lg:600} , borderRadius:5}}>
+            <Box sx={{    backgroundImage:`linear-gradient( to left,rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.1) 100%),url(${bghome})`,width:1, height: '100%', backgroundPosition: 'center', backgroundSize: 'cover', backgroundRepeat: 'no-repeat',display:'flex',flexDirection:'column', alignItems:'center' ,justifyContent:'center' }}   >
+                <Box sx={{ }}>
                 <Typography sx={{ textAlign: 'center',fontWeight:'bold' }} color="whitesmoke" variant='h3' ref={nameEl}></Typography>
                 <Typography sx={{ textAlign: 'center',fontFamily:'tanha' }} color="whitesmoke" variant='h4' ref={infoEl}> </Typography>
                 </Box>

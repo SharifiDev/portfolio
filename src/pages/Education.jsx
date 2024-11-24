@@ -62,7 +62,7 @@ const Resume = ({ helmetTitle }) => {
                     <Divider
                         textAlign="center"
                         sx={{
-                            mt: 2,
+                            mt: 0,
                             "&::before, &::after": {
                                 borderColor: "error.main",
                             },

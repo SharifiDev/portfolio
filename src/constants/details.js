@@ -15,7 +15,7 @@ export const devWorkInfo = [
         color: "lightcoral",
     },
     {
-        tooltipTitle: "تعداد دوره های من",
+        tooltipTitle: "تعداد نمونه کار ها ",
         icon: SchoolRounded ,
         total: 25,
         color: "lightskyblue",
@@ -23,7 +23,7 @@ export const devWorkInfo = [
     {
         tooltipTitle: "تعداد پروژه های من",
         icon: DataObjectRounded ,
-        total: 34,
+        total: 20,
         color: "lightslategray",
     },
     {
